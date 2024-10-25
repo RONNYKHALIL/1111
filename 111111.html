@@ -1,0 +1,10 @@
+<div id="widget-container"></div> <!-- Target container for the content -->
+
+<script>
+   fetch('https://your-hosted-page.com/custom-widget.html')
+      .then(response => response.text())
+      .then(html => {
+         document.getElementById('widget-container').innerHTML = html;
+      })
+      .catch(err => console.log('Failed to load widget: ', err));
+</script>
